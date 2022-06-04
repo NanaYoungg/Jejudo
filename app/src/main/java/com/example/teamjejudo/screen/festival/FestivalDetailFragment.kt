@@ -15,11 +15,16 @@ import com.example.teamjejudo.databinding.FragmentFestivalDetailBinding
 class FestivalDetailFragment : Fragment() {
 
     private var _binding: FragmentFestivalDetailBinding? = null
+    private var contentid:Int = -1
 
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        contentid = arguments?.getInt("contentid")?:0
+        super.onCreate(savedInstanceState)
+    }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

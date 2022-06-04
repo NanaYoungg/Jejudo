@@ -18,7 +18,7 @@ class FestivalViewModel
 
     val festivals = MutableLiveData<ArrayList<Item>>()
 
-    fun getFestivalData(progreesdial: ProgressDialog) {
+    fun getFestivalData() {
         val Key = "RfOWqUL5%2FWYn34M9dwfN317UuV8MR1dDhVG2TakLes3hWa2Yb2qq3JH99qZIZxuFjElGy3hUEbo67q3K3e0sxw%3D%3D"
         val retrofit = RetrofitClass().api.getFestivals(
             URLDecoder.decode(Key, "UTF-8"),
@@ -35,12 +35,9 @@ class FestivalViewModel
                     list.addAll(it.item)
                     festivals.value = list
                 }
-                progreesdial.dismiss()
-                Log.d("retrofitFesFrag","${response.body()?.response?.body?.items?.item}")
             }
 
             override fun onFailure(call: Call<Festival>, t: Throwable) {
-                Log.d("retrofitFesFrag","${t.message}")
                 Timber.e("실패 ")
             }
         })

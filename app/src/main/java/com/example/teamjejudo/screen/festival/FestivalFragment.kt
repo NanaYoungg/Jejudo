@@ -26,7 +26,6 @@ class FestivalFragment : Fragment() {
 
     private val binding get() = _binding!!
 
-    lateinit var progressDialog: ProgressDialog
     private val viewmodel:FestivalViewModel by viewModels()
 
     override fun onCreateView(
@@ -43,13 +42,9 @@ class FestivalFragment : Fragment() {
             setEtListeners(etSearchbar, adapter = searchAdapter,parentview)
         }
 
-        progressDialog = ProgressDialog(context)
-        progressDialog.setTitle("Loading")
-        progressDialog.setCancelable(false)
-        progressDialog.show()
-
-        viewmodel.getFestivalData(progressDialog)
+        viewmodel.getFestivalData()
         viewmodel.festivals.observe(viewLifecycleOwner){
+            binding.loaded = !(it.isNullOrEmpty())
             searchAdapter.setData(it)
         }
 

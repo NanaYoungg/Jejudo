@@ -15,6 +15,7 @@
             android:id="@+id/action_FirstFragment_to_SecondFragment"
             app:destination="@id/SecondFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/SecondFragment"
         android:name="com.example.teamjejudo.screen.festival.FestivalDetailFragment"
@@ -25,8 +26,17 @@
             android:id="@+id/action_SecondFragment_to_FirstFragment"
             app:destination="@id/FirstFragment" />
 
+        <action
+            android:id="@+id/action_SecondFragment_to_travelDetailFragment"
+            app:destination="@id/ThirdFragment" />
         <argument
             android:name="contentid"
-            app:argType="int" />
+            app:argType="integer" />
     </fragment>
+
+    <fragment
+        android:id="@+id/ThirdFragment"
+        android:name="com.example.teamjejudo.screen.TravelDetailFragment"
+        android:label="fragment_travel_detail"
+        tools:layout="@layout/fragment_travel_detail" />
 </navigation>

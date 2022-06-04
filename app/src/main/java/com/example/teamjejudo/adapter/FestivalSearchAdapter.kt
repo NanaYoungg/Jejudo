@@ -32,8 +32,10 @@ class FestivalSearchAdapter:
 
         init{
             binding.root.setOnClickListener { view->
-                val direction = FestivalFragmentDirections.actionFirstFragmentToSecondFragment(binding.viewModel.contentid)
-                view.findNavController().navigate(direction)
+                binding.viewModel?.contentid?.let { contentid->
+                    val direction = FestivalFragmentDirections.actionFirstFragmentToSecondFragment(contentid)
+                    view.findNavController().navigate(direction)
+                }
             }
         }
     }
