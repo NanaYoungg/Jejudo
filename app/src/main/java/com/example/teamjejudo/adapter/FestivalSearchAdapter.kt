@@ -12,15 +12,12 @@ import com.example.teamjejudo.R
 import com.example.teamjejudo.data.Festival
 import com.example.teamjejudo.databinding.CellFestivalForsearchBinding
 import com.example.teamjejudo.viewmodel.CellFestivalForSearchViewModel
+import java.util.*
 
 class FestivalSearchAdapter:
     ListAdapter<Festival, FestivalSearchAdapter.ViewHolder>(diffUtil), Filterable {
 
-    private val fulllist: java.util.ArrayList<Festival>
-
-    init {
-        fulllist = ArrayList<Festival>(currentList)
-    }
+    private var list = mutableListOf<Festival>()
 
     inner class ViewHolder(private val binding:CellFestivalForsearchBinding): RecyclerView.ViewHolder(binding.root){
         fun bind(items: Festival){
@@ -59,6 +56,10 @@ class FestivalSearchAdapter:
         }
     }
 
+    fun setData(list: MutableList<Festival>?){
+        this.list = list!!
+        submitList(list)
+    }
 
     override fun getFilter(): Filter {
         return SearchFilter
@@ -67,13 +68,13 @@ class FestivalSearchAdapter:
     private val SearchFilter : Filter = object : Filter() {
         override fun performFiltering(constraint: CharSequence): FilterResults {
 
-            val filteredList: java.util.ArrayList<Festival> = java.util.ArrayList()
+            val filteredList: ArrayList<Festival> = ArrayList()
             if (constraint == null || constraint.length == 0) {
-                filteredList.addAll(fulllist)
+                filteredList.addAll(list)
             } else {
                 val filterPattern = constraint.toString().lowercase().trim { it <= ' '}
 
-                for (item in fulllist) {
+                for (item in list) {
                     if(item.festivalTitle.contains(filterPattern)){
                         filteredList.add(item)
                     }

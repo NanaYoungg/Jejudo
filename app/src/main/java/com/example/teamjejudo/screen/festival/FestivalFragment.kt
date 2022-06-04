@@ -2,15 +2,21 @@ package com.example.teamjejudo.screen.festival
 
 import android.hardware.lights.LightsManager
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.MutableLiveData
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.teamjejudo.R
 import com.example.teamjejudo.adapter.FestivalAdapter
+import com.example.teamjejudo.adapter.FestivalSearchAdapter
 import com.example.teamjejudo.data.Festival
 import com.example.teamjejudo.databinding.FragmentFestivalBinding
 import timber.log.Timber
@@ -27,10 +33,21 @@ class FestivalFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-
+        val searchAdapter = FestivalSearchAdapter()
+        val festivalEx = arrayListOf<Festival>(
+            Festival(festivalTitle = "dd"),
+            Festival(festivalTitle = "연어"),
+            Festival(festivalTitle = "곰"),
+        )
         _binding = FragmentFestivalBinding.inflate(inflater, container, false)
+        binding.apply {
+            binding.rvFestivalForsearch.adapter = searchAdapter
+            binding.rvFestivalForsearch.layoutManager =
+                LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+            searchAdapter.setData(festivalEx)
+            setEtListeners(etSearchbar, adapter = searchAdapter)
+        }
         return binding.root
-
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -47,9 +64,25 @@ class FestivalFragment : Fragment() {
         binding.rvFestival.adapter = FestivalAdapter(festival, requireContext())
         binding.rvFestival.layoutManager =
             LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
-        Timber.d("sdfsdfsdfsdfsdfsdf")
+
     }
 
+    private fun setEtListeners(et:EditText,adapter:FestivalSearchAdapter){
+        et.setOnFocusChangeListener { v, hasFocus ->
+            binding.isFocused = hasFocus
+        }
+
+        et.addTextChangedListener(object : TextWatcher {
+            override fun afterTextChanged(s: Editable) {}
+            override fun beforeTextChanged(s: CharSequence, start: Int,count: Int, after: Int) {}
+            override fun onTextChanged(
+                str: CharSequence, start: Int,
+                before: Int, count: Int,
+            ) {
+                adapter.filter.filter(str)
+            }
+        })
+    }
 
     override fun onDestroyView() {
         super.onDestroyView()
