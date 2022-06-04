@@ -8,8 +8,16 @@
         "source": "C:\\Users\\0427h\\.gradle\\daemon\\7.3.3\\com.example.teamjejudo.app-main-44:\\layout\\activity_main2.xml"
     },
     {
+        "merged": "C:\\Users\\0427h\\.gradle\\daemon\\7.3.3\\com.example.teamjejudo.app-merged_res-42:\\layout_fragment_near_tour_detail.xml.flat",
+        "source": "C:\\Users\\0427h\\.gradle\\daemon\\7.3.3\\com.example.teamjejudo.app-main-44:\\layout\\fragment_near_tour_detail.xml"
+    },
+    {
         "merged": "C:\\Users\\0427h\\.gradle\\daemon\\7.3.3\\com.example.teamjejudo.app-merged_res-42:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\0427h\\.gradle\\daemon\\7.3.3\\com.example.teamjejudo.app-main-44:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\0427h\\.gradle\\daemon\\7.3.3\\com.example.teamjejudo.app-merged_res-42:\\drawable_round.xml.flat",
+        "source": "C:\\Users\\0427h\\.gradle\\daemon\\7.3.3\\com.example.teamjejudo.app-main-44:\\drawable\\round.xml"
     },
     {
         "merged": "C:\\Users\\0427h\\.gradle\\daemon\\7.3.3\\com.example.teamjejudo.app-merged_res-42:\\navigation_nav_festival_detail.xml.flat",
@@ -32,10 +40,6 @@
         "source": "C:\\Users\\0427h\\.gradle\\daemon\\7.3.3\\com.example.teamjejudo.app-main-44:\\mipmap-hdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.teamjejudo.app-merged_res-42:/layout_neartour.xml.flat",
-        "source": "com.example.teamjejudo.app-main-44:/layout/neartour.xml"
-    },
-    {
         "merged": "C:\\Users\\0427h\\.gradle\\daemon\\7.3.3\\com.example.teamjejudo.app-merged_res-42:\\layout_content_main.xml.flat",
         "source": "C:\\Users\\0427h\\.gradle\\daemon\\7.3.3\\com.example.teamjejudo.app-main-44:\\layout\\content_main.xml"
     },
@@ -46,6 +50,10 @@
     {
         "merged": "C:\\Users\\0427h\\.gradle\\daemon\\7.3.3\\com.example.teamjejudo.app-merged_res-42:\\layout_fragment_festival_detail.xml.flat",
         "source": "C:\\Users\\0427h\\.gradle\\daemon\\7.3.3\\com.example.teamjejudo.app-main-44:\\layout\\fragment_festival_detail.xml"
+    },
+    {
+        "merged": "C:\\Users\\0427h\\.gradle\\daemon\\7.3.3\\com.example.teamjejudo.app-merged_res-42:\\drawable_round2.xml.flat",
+        "source": "C:\\Users\\0427h\\.gradle\\daemon\\7.3.3\\com.example.teamjejudo.app-main-44:\\drawable\\round2.xml"
     },
     {
         "merged": "C:\\Users\\0427h\\.gradle\\daemon\\7.3.3\\com.example.teamjejudo.app-merged_res-42:\\layout_neartour.xml.flat",
@@ -88,16 +96,24 @@
         "source": "C:\\Users\\0427h\\.gradle\\daemon\\7.3.3\\com.example.teamjejudo.app-main-44:\\mipmap-mdpi\\ic_launcher_round.webp"
     },
     {
+        "merged": "C:\\Users\\0427h\\.gradle\\daemon\\7.3.3\\com.example.teamjejudo.app-merged_res-42:\\font_notosanskr.otf.flat",
+        "source": "C:\\Users\\0427h\\.gradle\\daemon\\7.3.3\\com.example.teamjejudo.app-main-44:\\font\\notosanskr.otf"
+    },
+    {
+        "merged": "C:\\Users\\0427h\\.gradle\\daemon\\7.3.3\\com.example.teamjejudo.app-merged_res-42:\\font_basic_font.xml.flat",
+        "source": "C:\\Users\\0427h\\.gradle\\daemon\\7.3.3\\com.example.teamjejudo.app-main-44:\\font\\basic_font.xml"
+    },
+    {
         "merged": "C:\\Users\\0427h\\.gradle\\daemon\\7.3.3\\com.example.teamjejudo.app-merged_res-42:\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
         "source": "C:\\Users\\0427h\\.gradle\\daemon\\7.3.3\\com.example.teamjejudo.app-pngs-37:\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "C:\\Users\\0427h\\.gradle\\daemon\\7.3.3\\com.example.teamjejudo.app-merged_res-42:\\drawable_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\0427h\\.gradle\\daemon\\7.3.3\\com.example.teamjejudo.app-main-44:\\drawable\\ic_launcher_background.xml"
-    },
-    {
         "merged": "C:\\Users\\0427h\\.gradle\\daemon\\7.3.3\\com.example.teamjejudo.app-merged_res-42:\\layout_cell_festival.xml.flat",
         "source": "C:\\Users\\0427h\\.gradle\\daemon\\7.3.3\\com.example.teamjejudo.app-main-44:\\layout\\cell_festival.xml"
+    },
+    {
+        "merged": "C:\\Users\\0427h\\.gradle\\daemon\\7.3.3\\com.example.teamjejudo.app-merged_res-42:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\0427h\\.gradle\\daemon\\7.3.3\\com.example.teamjejudo.app-main-44:\\drawable\\ic_launcher_background.xml"
     },
     {
         "merged": "C:\\Users\\0427h\\.gradle\\daemon\\7.3.3\\com.example.teamjejudo.app-merged_res-42:\\layout_fragment_festival.xml.flat",

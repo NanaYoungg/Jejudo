@@ -4,7 +4,7 @@
             "outputFile": "com.example.teamjejudo.app-mergeDebugResources-40:/values-pt/values-pt.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\0427h\\.gradle\\caches\\transforms-3\\c306ff6207b8a35a6a6ee0c09da254f2\\transformed\\appcompat-1.4.2\\res\\values-pt\\values-pt.xml",
+                    "source": "C:\\Users\\0427h\\.gradle\\caches\\transforms-3\\aff48e40a8e0ee333ff5e9f2cfb9534d\\transformed\\appcompat-1.4.2\\res\\values-pt\\values-pt.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\0427h\\.gradle\\caches\\transforms-3\\3742912dd62db1f8c6584863c8fa5348\\transformed\\navigation-ui-2.4.2\\res\\values-pt\\values-pt.xml",
+                    "source": "C:\\Users\\0427h\\.gradle\\caches\\transforms-3\\95c24dc9ffdda7cca1d5d10e0486d03f\\transformed\\navigation-ui-2.4.2\\res\\values-pt\\values-pt.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
@@ -38,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\0427h\\.gradle\\caches\\transforms-3\\e36cb75ae4f72b56337362533afd3af2\\transformed\\core-1.7.0\\res\\values-pt\\values-pt.xml",
+                    "source": "C:\\Users\\0427h\\.gradle\\caches\\transforms-3\\a7f92efa140d81a157c77c6f1d63c5b9\\transformed\\core-1.7.0\\res\\values-pt\\values-pt.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

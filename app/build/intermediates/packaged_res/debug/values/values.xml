@@ -13,6 +13,7 @@
     <string name="app_name">TeamJeJuDo</string>
     <string name="festival_detail_fragment_label">Festival Detail Fragment</string>
     <string name="festival_fragment_label">Festival Fragment</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="ongoing_festival_title">진행중인 축제</string>
     <style name="Theme.TeamJeJuDo" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         

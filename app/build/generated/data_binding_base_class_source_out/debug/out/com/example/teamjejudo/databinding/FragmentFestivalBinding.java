@@ -25,15 +25,20 @@ public final class FragmentFestivalBinding implements ViewBinding {
   public final Button buttonFirst;
 
   @NonNull
+  public final RecyclerView neartourRecyclerview;
+
+  @NonNull
   public final RecyclerView rvFestival;
 
   @NonNull
   public final TextView tvOngoingFestivalTitle;
 
   private FragmentFestivalBinding(@NonNull ConstraintLayout rootView, @NonNull Button buttonFirst,
-      @NonNull RecyclerView rvFestival, @NonNull TextView tvOngoingFestivalTitle) {
+      @NonNull RecyclerView neartourRecyclerview, @NonNull RecyclerView rvFestival,
+      @NonNull TextView tvOngoingFestivalTitle) {
     this.rootView = rootView;
     this.buttonFirst = buttonFirst;
+    this.neartourRecyclerview = neartourRecyclerview;
     this.rvFestival = rvFestival;
     this.tvOngoingFestivalTitle = tvOngoingFestivalTitle;
   }
@@ -71,6 +76,12 @@ public final class FragmentFestivalBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.neartour_recyclerview;
+      RecyclerView neartourRecyclerview = ViewBindings.findChildViewById(rootView, id);
+      if (neartourRecyclerview == null) {
+        break missingId;
+      }
+
       id = R.id.rv_festival;
       RecyclerView rvFestival = ViewBindings.findChildViewById(rootView, id);
       if (rvFestival == null) {
@@ -83,8 +94,8 @@ public final class FragmentFestivalBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentFestivalBinding((ConstraintLayout) rootView, buttonFirst, rvFestival,
-          tvOngoingFestivalTitle);
+      return new FragmentFestivalBinding((ConstraintLayout) rootView, buttonFirst,
+          neartourRecyclerview, rvFestival, tvOngoingFestivalTitle);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -1,15 +1,19 @@
 [
     {
-        "merged": "C:\\Users\\0427h\\.gradle\\daemon\\7.3.3\\com.example.teamjejudo.app-mergeDebugResources-41:\\layout\\fragment_festival_detail.xml",
-        "source": "C:\\Users\\0427h\\.gradle\\daemon\\7.3.3\\com.example.teamjejudo.app-main-44:\\layout\\fragment_festival_detail.xml"
-    },
-    {
         "merged": "C:\\Users\\0427h\\.gradle\\daemon\\7.3.3\\com.example.teamjejudo.app-mergeDebugResources-41:\\layout\\neartour.xml",
         "source": "C:\\Users\\0427h\\.gradle\\daemon\\7.3.3\\com.example.teamjejudo.app-main-44:\\layout\\neartour.xml"
     },
     {
+        "merged": "C:\\Users\\0427h\\.gradle\\daemon\\7.3.3\\com.example.teamjejudo.app-mergeDebugResources-41:\\layout\\fragment_festival_detail.xml",
+        "source": "C:\\Users\\0427h\\.gradle\\daemon\\7.3.3\\com.example.teamjejudo.app-main-44:\\layout\\fragment_festival_detail.xml"
+    },
+    {
         "merged": "com.example.teamjejudo.app-mergeDebugResources-41:/layout/neartour.xml",
         "source": "com.example.teamjejudo.app-main-44:/layout/neartour.xml"
+    },
+    {
+        "merged": "C:\\Users\\0427h\\.gradle\\daemon\\7.3.3\\com.example.teamjejudo.app-mergeDebugResources-41:\\layout\\fragment_near_tour_detail.xml",
+        "source": "C:\\Users\\0427h\\.gradle\\daemon\\7.3.3\\com.example.teamjejudo.app-main-44:\\layout\\fragment_near_tour_detail.xml"
     },
     {
         "merged": "C:\\Users\\0427h\\.gradle\\daemon\\7.3.3\\com.example.teamjejudo.app-mergeDebugResources-41:\\layout\\activity_main2.xml",

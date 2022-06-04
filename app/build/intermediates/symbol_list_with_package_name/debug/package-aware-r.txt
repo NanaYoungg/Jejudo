@@ -2558,12 +2558,15 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable round2
 drawable test_custom_background
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+font basic_font
 font font_bold
 font font_light
+font notosanskr
 id ALT
 id BOTTOM_END
 id BOTTOM_START
@@ -2580,6 +2583,7 @@ id SYM
 id SecondFragment
 id TOP_END
 id TOP_START
+id ThirdFragment
 id accelerate
 id accessibility_action_clickable_span
 id accessibility_custom_action_0
@@ -2618,6 +2622,7 @@ id actionDown
 id actionDownUp
 id actionUp
 id action_FirstFragment_to_SecondFragment
+id action_FirstFragment_to_nearTourDetailFragment
 id action_SecondFragment_to_FirstFragment
 id action_bar
 id action_bar_activity_content
@@ -2635,6 +2640,7 @@ id action_menu_presenter
 id action_mode_bar
 id action_mode_bar_stub
 id action_mode_close_button
+id action_nearTourDetailFragment_to_FirstFragment
 id action_text
 id actions
 id activity_chooser_view_content
@@ -2732,6 +2738,7 @@ id disableIntraAutoTransition
 id disablePostScroll
 id disableScroll
 id disjoint
+id divider
 id dragAnticlockwise
 id dragClockwise
 id dragDown
@@ -2894,6 +2901,10 @@ id navigation_header_container
 id neartour_image
 id neartour_recyclerview
 id neartour_title
+id neartourdetail_image
+id neartourdetail_locatetext
+id neartourdetail_overviewtext
+id neartourdetail_titletext
 id never
 id neverCompleteToEnd
 id neverCompleteToStart
@@ -3027,6 +3038,8 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
+id textView3
+id textView6
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -3195,6 +3208,7 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout fragment_festival
 layout fragment_festival_detail
+layout fragment_near_tour_detail
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
@@ -3319,6 +3333,7 @@ string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
 string festival_detail_fragment_label
 string festival_fragment_label
+string hello_blank_fragment
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
 string item_view_role_description
