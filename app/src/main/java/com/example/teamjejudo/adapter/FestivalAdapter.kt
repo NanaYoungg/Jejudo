@@ -33,4 +33,5 @@ class FestivalAdapter(private val festivalData: List<Festival>, context: Context
             binding.tvFestivalDate.text = festival.startDate + " ~ " + festival.endDate
         }
     }
+
 }
