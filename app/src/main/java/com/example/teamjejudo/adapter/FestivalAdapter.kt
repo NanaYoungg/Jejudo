@@ -5,17 +5,19 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.teamjejudo.data.Festival
 import com.example.teamjejudo.databinding.CellFestivalBinding
+import timber.log.Timber
 
 
 class FestivalAdapter : RecyclerView.Adapter<FestivalAdapter.MyViewHolder>() {
-    var festivalList = mutableListOf<Festival>()
+    var festivalList = mutableListOf<Festival.Response.Body.Items.Item>()
 
     inner class MyViewHolder(private val binding: CellFestivalBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(festival: Festival) {
-            binding.tvFestivalTitle.text = festival.festivalTitle
-            binding.tvFestivalArea.text = festival.festivalArea.toString()
+        fun bind(festival: Festival.Response.Body.Items.Item) {
+            binding.tvFestivalTitle.text = festival.title
+            println("태그 ${festival.title}")
+            binding.tvFestivalArea.text = festival.areacode.toString()
         }
     }
 

@@ -9,12 +9,12 @@ interface FestivalInterface {
 
 // http://api.visitkorea.or.kr/openapi/service/rest/KorService/searchFestival
 
-    @GET("searchFestival")
-    fun getFestival(
-        @Header("token") token: String?,
-    ): Call<List<Festival>>
-
-    companion object {
-//        const val KEY_FESTIVAL
-    }
+//    @GET("searchFestival")
+//    fun getFestival(
+//        @Header("token") token: String?,
+//    ): Call<List<Festival>>
+//
+//    companion object {
+////        const val KEY_FESTIVAL
+//    }
 }
