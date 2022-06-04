@@ -1,0 +1,108 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.teamjejudo"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->C:\Users\0427h\Documents\GitHub\Jejudo\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="32" />
+9-->C:\Users\0427h\Documents\GitHub\Jejudo\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->C:\Users\0427h\Documents\GitHub\Jejudo\app\src\main\AndroidManifest.xml:5:5-67
+11-->C:\Users\0427h\Documents\GitHub\Jejudo\app\src\main\AndroidManifest.xml:5:22-64
+12
+13    <application
+13-->C:\Users\0427h\Documents\GitHub\Jejudo\app\src\main\AndroidManifest.xml:6:5-28:19
+14        android:allowBackup="true"
+14-->C:\Users\0427h\Documents\GitHub\Jejudo\app\src\main\AndroidManifest.xml:7:9-35
+15        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+15-->[androidx.core:core:1.7.0] C:\Users\0427h\.gradle\caches\transforms-3\e36cb75ae4f72b56337362533afd3af2\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
+16        android:dataExtractionRules="@xml/data_extraction_rules"
+16-->C:\Users\0427h\Documents\GitHub\Jejudo\app\src\main\AndroidManifest.xml:8:9-65
+17        android:debuggable="true"
+18        android:fullBackupContent="@xml/backup_rules"
+18-->C:\Users\0427h\Documents\GitHub\Jejudo\app\src\main\AndroidManifest.xml:9:9-54
+19        android:icon="@mipmap/ic_launcher"
+19-->C:\Users\0427h\Documents\GitHub\Jejudo\app\src\main\AndroidManifest.xml:10:9-43
+20        android:label="@string/app_name"
+20-->C:\Users\0427h\Documents\GitHub\Jejudo\app\src\main\AndroidManifest.xml:11:9-41
+21        android:roundIcon="@mipmap/ic_launcher_round"
+21-->C:\Users\0427h\Documents\GitHub\Jejudo\app\src\main\AndroidManifest.xml:12:9-54
+22        android:supportsRtl="true"
+22-->C:\Users\0427h\Documents\GitHub\Jejudo\app\src\main\AndroidManifest.xml:13:9-35
+23        android:testOnly="true"
+24        android:theme="@style/Theme.Design.NoActionBar"
+24-->C:\Users\0427h\Documents\GitHub\Jejudo\app\src\main\AndroidManifest.xml:14:9-56
+25        android:usesCleartextTraffic="true" >
+25-->C:\Users\0427h\Documents\GitHub\Jejudo\app\src\main\AndroidManifest.xml:15:9-44
+26        <activity
+26-->C:\Users\0427h\Documents\GitHub\Jejudo\app\src\main\AndroidManifest.xml:17:9-27:20
+27            android:name="com.example.teamjejudo.MainActivity"
+27-->C:\Users\0427h\Documents\GitHub\Jejudo\app\src\main\AndroidManifest.xml:18:13-41
+28            android:exported="true"
+28-->C:\Users\0427h\Documents\GitHub\Jejudo\app\src\main\AndroidManifest.xml:19:13-36
+29            android:label="@string/app_name"
+29-->C:\Users\0427h\Documents\GitHub\Jejudo\app\src\main\AndroidManifest.xml:20:13-45
+30            android:theme="@style/Theme.TeamJeJuDo.NoActionBar" >
+30-->C:\Users\0427h\Documents\GitHub\Jejudo\app\src\main\AndroidManifest.xml:21:13-64
+31            <intent-filter>
+31-->C:\Users\0427h\Documents\GitHub\Jejudo\app\src\main\AndroidManifest.xml:22:13-26:29
+32                <action android:name="android.intent.action.MAIN" />
+32-->C:\Users\0427h\Documents\GitHub\Jejudo\app\src\main\AndroidManifest.xml:23:17-69
+32-->C:\Users\0427h\Documents\GitHub\Jejudo\app\src\main\AndroidManifest.xml:23:25-66
+33
+34                <category android:name="android.intent.category.LAUNCHER" />
+34-->C:\Users\0427h\Documents\GitHub\Jejudo\app\src\main\AndroidManifest.xml:25:17-77
+34-->C:\Users\0427h\Documents\GitHub\Jejudo\app\src\main\AndroidManifest.xml:25:27-74
+35            </intent-filter>
+36        </activity>
+37
+38        <uses-library
+38-->[androidx.window:window:1.0.0] C:\Users\0427h\.gradle\caches\transforms-3\77607a930825bd38adc8225699e5e0ad\transformed\window-1.0.0\AndroidManifest.xml:25:9-27:40
+39            android:name="androidx.window.extensions"
+39-->[androidx.window:window:1.0.0] C:\Users\0427h\.gradle\caches\transforms-3\77607a930825bd38adc8225699e5e0ad\transformed\window-1.0.0\AndroidManifest.xml:26:13-54
+40            android:required="false" />
+40-->[androidx.window:window:1.0.0] C:\Users\0427h\.gradle\caches\transforms-3\77607a930825bd38adc8225699e5e0ad\transformed\window-1.0.0\AndroidManifest.xml:27:13-37
+41        <uses-library
+41-->[androidx.window:window:1.0.0] C:\Users\0427h\.gradle\caches\transforms-3\77607a930825bd38adc8225699e5e0ad\transformed\window-1.0.0\AndroidManifest.xml:28:9-30:40
+42            android:name="androidx.window.sidecar"
+42-->[androidx.window:window:1.0.0] C:\Users\0427h\.gradle\caches\transforms-3\77607a930825bd38adc8225699e5e0ad\transformed\window-1.0.0\AndroidManifest.xml:29:13-51
+43            android:required="false" />
+43-->[androidx.window:window:1.0.0] C:\Users\0427h\.gradle\caches\transforms-3\77607a930825bd38adc8225699e5e0ad\transformed\window-1.0.0\AndroidManifest.xml:30:13-37
+44
+45        <service
+45-->[androidx.room:room-runtime:2.4.2] C:\Users\0427h\.gradle\caches\transforms-3\206c248512b06ac97853cd203cfac695\transformed\room-runtime-2.4.2\AndroidManifest.xml:25:9-28:40
+46            android:name="androidx.room.MultiInstanceInvalidationService"
+46-->[androidx.room:room-runtime:2.4.2] C:\Users\0427h\.gradle\caches\transforms-3\206c248512b06ac97853cd203cfac695\transformed\room-runtime-2.4.2\AndroidManifest.xml:26:13-74
+47            android:directBootAware="true"
+47-->[androidx.room:room-runtime:2.4.2] C:\Users\0427h\.gradle\caches\transforms-3\206c248512b06ac97853cd203cfac695\transformed\room-runtime-2.4.2\AndroidManifest.xml:27:13-43
+48            android:exported="false" />
+48-->[androidx.room:room-runtime:2.4.2] C:\Users\0427h\.gradle\caches\transforms-3\206c248512b06ac97853cd203cfac695\transformed\room-runtime-2.4.2\AndroidManifest.xml:28:13-37
+49
+50        <provider
+50-->[androidx.emoji2:emoji2:1.0.0] C:\Users\0427h\.gradle\caches\transforms-3\8aef4e70ce677e20fe8052e70e59f9e7\transformed\emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
+51            android:name="androidx.startup.InitializationProvider"
+51-->[androidx.emoji2:emoji2:1.0.0] C:\Users\0427h\.gradle\caches\transforms-3\8aef4e70ce677e20fe8052e70e59f9e7\transformed\emoji2-1.0.0\AndroidManifest.xml:27:13-67
+52            android:authorities="com.example.teamjejudo.androidx-startup"
+52-->[androidx.emoji2:emoji2:1.0.0] C:\Users\0427h\.gradle\caches\transforms-3\8aef4e70ce677e20fe8052e70e59f9e7\transformed\emoji2-1.0.0\AndroidManifest.xml:28:13-68
+53            android:exported="false" >
+53-->[androidx.emoji2:emoji2:1.0.0] C:\Users\0427h\.gradle\caches\transforms-3\8aef4e70ce677e20fe8052e70e59f9e7\transformed\emoji2-1.0.0\AndroidManifest.xml:29:13-37
+54            <meta-data
+54-->[androidx.emoji2:emoji2:1.0.0] C:\Users\0427h\.gradle\caches\transforms-3\8aef4e70ce677e20fe8052e70e59f9e7\transformed\emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
+55                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+55-->[androidx.emoji2:emoji2:1.0.0] C:\Users\0427h\.gradle\caches\transforms-3\8aef4e70ce677e20fe8052e70e59f9e7\transformed\emoji2-1.0.0\AndroidManifest.xml:32:17-75
+56                android:value="androidx.startup" />
+56-->[androidx.emoji2:emoji2:1.0.0] C:\Users\0427h\.gradle\caches\transforms-3\8aef4e70ce677e20fe8052e70e59f9e7\transformed\emoji2-1.0.0\AndroidManifest.xml:33:17-49
+57            <meta-data
+57-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\0427h\.gradle\caches\transforms-3\1a66539b8fdc40eb9d840cfdf85902fb\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
+58                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+58-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\0427h\.gradle\caches\transforms-3\1a66539b8fdc40eb9d840cfdf85902fb\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
+59                android:value="androidx.startup" />
+59-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\0427h\.gradle\caches\transforms-3\1a66539b8fdc40eb9d840cfdf85902fb\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
+60        </provider>
+61    </application>
+62
+63</manifest>
