@@ -24,12 +24,13 @@ class FestivalFragment : Fragment() {
 
     private var _binding: FragmentFestivalBinding? = null
     private val binding get() = _binding!!
-
-    private lateinit var adapter: FestivalAdapter
+//    private lateinit var adapter: FestivalAdapter
+//    private val adapter: FestivalAdapter by lazy { FestivalAdapter() }
     lateinit var progressDialog: ProgressDialog
 
     //    private val festival = mutableListOf<Festival>()
     private val festival = mutableListOf<Festival.Response.Body.Items.Item>()
+    private val festival2 = mutableListOf<Festival>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -43,7 +44,7 @@ class FestivalFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        println("ddddddddddddddddddddddddddddddd22222")
         initFestivalAdapter()
         binding.buttonFirst.setOnClickListener {
             findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
@@ -58,6 +59,8 @@ class FestivalFragment : Fragment() {
     }
 
     private fun initFestivalAdapter() {
+        println("dddddd ${festival.size}")
+        println("ssss233333333333333332 ${festival2.size}")
         val adapter = FestivalAdapter() //어댑터 객체 만듦
         adapter.festivalList = festival //데이터 넣어줌
         binding.rvFestival.adapter = adapter //리사이클러뷰에 어댑터 연결
@@ -77,12 +80,13 @@ class FestivalFragment : Fragment() {
             override fun onResponse(call: Call<Festival>, response: Response<Festival>) {
                 response.body()?.response?.body?.items?.let { festival.addAll(it.item) }
                 progressDialog.dismiss()
-//                println(response.body()?.response?.body?.items?.item)
+                println("test ${response.body()?.response?.body?.items?.item}")
+
+                binding.rvFestival.adapter?.notifyDataSetChanged()
             }
 
             override fun onFailure(call: Call<Festival>, t: Throwable) {
                 Timber.e("실패 ")
-
             }
 
         })
