@@ -3,6 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/WorkSpace/TeamJeJuDo/Jejudo/app/src/main/res/layout/activity_main.xml" value="0.1721014492753623" />
+        <entry key="..\:/WorkSpace/TeamJeJuDo/Jejudo/app/src/main/res/layout/cell_festival.xml" value="0.1721014492753623" />
+        <entry key="..\:/WorkSpace/TeamJeJuDo/Jejudo/app/src/main/res/layout/content_main.xml" value="0.1721014492753623" />
+        <entry key="..\:/WorkSpace/TeamJeJuDo/Jejudo/app/src/main/res/layout/fragment_festival.xml" value="0.1721014492753623" />
+        <entry key="..\:/WorkSpace/TeamJeJuDo/Jejudo/app/src/main/res/layout/fragment_festival_detail.xml" value="0.1721014492753623" />
         <entry key="..\:/WorkSpace/TeamJeJuDo/app/src/main/res/font/title_font.xml" value="0.20833333333333334" />
         <entry key="..\:/WorkSpace/TeamJeJuDo/app/src/main/res/layout/activity_main.xml" value="0.1408514492753623" />
         <entry key="..\:/WorkSpace/TeamJeJuDo/app/src/main/res/layout/cell_festival.xml" value="0.18857142857142858" />

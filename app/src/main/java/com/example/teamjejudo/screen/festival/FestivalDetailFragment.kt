@@ -9,15 +9,10 @@ import androidx.navigation.fragment.findNavController
 import com.example.teamjejudo.R
 import com.example.teamjejudo.databinding.FragmentFestivalDetailBinding
 
-/**
- * A simple [Fragment] subclass as the second destination in the navigation.
- */
 class FestivalDetailFragment : Fragment() {
 
     private var _binding: FragmentFestivalDetailBinding? = null
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
     override fun onCreateView(
