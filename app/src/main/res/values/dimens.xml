@@ -2,5 +2,5 @@
 <resources>
     <dimen name="ongoing_festival_title_margin_top">50dp</dimen>
     <dimen name="ongoing_festival_rv_margin_top">14dp</dimen>
-    <dimen name="view_height">200dp</dimen>
+    <dimen name="view_height">110dp</dimen>
 </resources>

@@ -21,10 +21,12 @@ class FestivalAdapter : RecyclerView.Adapter<FestivalAdapter.ViewHolder>() {
             binding.tvFestivalTitle.text = festival.title
             binding.tvFestivalArea.text = festival.addr1
             binding.tvFestivalDate.text = "${festival.eventstartdate} ~ ${festival.eventenddate}"
+
+            binding.ivFestivalRepresent.clipToOutline = true
             Glide.with(itemView.context).load(festival.firstimage).into(binding.ivFestivalRepresent)
 
 
-            binding.clFestival.setOnClickListener {
+            binding.cvFestival.setOnClickListener {
                 val bundle = bundleOf(
                     "title" to festival.title,
                     "area" to festival.addr1,

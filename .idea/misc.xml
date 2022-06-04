@@ -4,12 +4,13 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/WorkSpace/TeamJeJuDo/Jejudo/app/src/main/res/drawable/basic_bacground_color.xml" value="0.1785" />
+        <entry key="..\:/WorkSpace/TeamJeJuDo/Jejudo/app/src/main/res/drawable/round_bottom_corner_img.xml" value="0.175" />
         <entry key="..\:/WorkSpace/TeamJeJuDo/Jejudo/app/src/main/res/drawable/round_corner_img.xml" value="0.104" />
         <entry key="..\:/WorkSpace/TeamJeJuDo/Jejudo/app/src/main/res/font/bacit_font.xml" value="0.26145833333333335" />
         <entry key="..\:/WorkSpace/TeamJeJuDo/Jejudo/app/src/main/res/font/basic_font.xml" value="0.20729166666666668" />
         <entry key="..\:/WorkSpace/TeamJeJuDo/Jejudo/app/src/main/res/layout/activity_main.xml" value="0.1721014492753623" />
         <entry key="..\:/WorkSpace/TeamJeJuDo/Jejudo/app/src/main/res/layout/activity_splash.xml" value="0.15172101449275363" />
-        <entry key="..\:/WorkSpace/TeamJeJuDo/Jejudo/app/src/main/res/layout/cell_festival.xml" value="0.1721014492753623" />
+        <entry key="..\:/WorkSpace/TeamJeJuDo/Jejudo/app/src/main/res/layout/cell_festival.xml" value="0.1" />
         <entry key="..\:/WorkSpace/TeamJeJuDo/Jejudo/app/src/main/res/layout/content_main.xml" value="0.1721014492753623" />
         <entry key="..\:/WorkSpace/TeamJeJuDo/Jejudo/app/src/main/res/layout/fragment_festival.xml" value="0.1721014492753623" />
         <entry key="..\:/WorkSpace/TeamJeJuDo/Jejudo/app/src/main/res/layout/fragment_festival_detail.xml" value="0.1721014492753623" />

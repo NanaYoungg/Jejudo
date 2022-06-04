@@ -29,9 +29,9 @@ class FestivalDetailFragment : Fragment() {
         binding.apply {
             tvFestivalDetailTitle.text = arguments?.getString("title")
             tvFestivalDetailArea.text = arguments?.getString("area")
+            ivFestivalDetail.clipToOutline = true
             Glide.with(requireContext()).load(arguments?.getString("photo"))
                 .into(binding.ivFestivalDetail)
-
 
         }
     }
