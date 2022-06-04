@@ -17,7 +17,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.teamjejudo.R
 import com.example.teamjejudo.adapter.FestivalAdapter
 import com.example.teamjejudo.adapter.FestivalSearchAdapter
-import com.example.teamjejudo.data.Festival
+import com.example.teamjejudo.data.FestivalEx
 import com.example.teamjejudo.databinding.FragmentFestivalBinding
 import timber.log.Timber
 import java.util.ArrayList
@@ -25,7 +25,7 @@ import java.util.ArrayList
 class FestivalFragment : Fragment() {
 
     private var _binding: FragmentFestivalBinding? = null
-    private var festival = ArrayList<Festival>()
+    private var festival = ArrayList<FestivalEx>()
 
     private val binding get() = _binding!!
 
@@ -34,10 +34,10 @@ class FestivalFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         val searchAdapter = FestivalSearchAdapter()
-        val festivalEx = arrayListOf<Festival>(
-            Festival(festivalTitle = "dd"),
-            Festival(festivalTitle = "연어"),
-            Festival(festivalTitle = "곰"),
+        val festivalEx = arrayListOf<FestivalEx>(
+            FestivalEx(festivalTitle = "dd"),
+            FestivalEx(festivalTitle = "연어"),
+            FestivalEx(festivalTitle = "곰"),
         )
         _binding = FragmentFestivalBinding.inflate(inflater, container, false)
         binding.apply {

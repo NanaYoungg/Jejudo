@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName
 
 //http://api.visitkorea.or.kr/openapi/service/rest/KorService/searchFestival
 
-data class Festival(
+data class FestivalEx(
 //    @SerializedName("title")
 //    val festivalTitle: String,
 //    @SerializedName("areacode")

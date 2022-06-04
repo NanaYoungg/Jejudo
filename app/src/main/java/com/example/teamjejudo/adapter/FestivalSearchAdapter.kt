@@ -9,18 +9,18 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.teamjejudo.R
-import com.example.teamjejudo.data.Festival
+import com.example.teamjejudo.data.FestivalEx
 import com.example.teamjejudo.databinding.CellFestivalForsearchBinding
 import com.example.teamjejudo.viewmodel.CellFestivalForSearchViewModel
 import java.util.*
 
 class FestivalSearchAdapter:
-    ListAdapter<Festival, FestivalSearchAdapter.ViewHolder>(diffUtil), Filterable {
+    ListAdapter<FestivalEx, FestivalSearchAdapter.ViewHolder>(diffUtil), Filterable {
 
-    private var list = mutableListOf<Festival>()
+    private var list = mutableListOf<FestivalEx>()
 
     inner class ViewHolder(private val binding:CellFestivalForsearchBinding): RecyclerView.ViewHolder(binding.root){
-        fun bind(items: Festival){
+        fun bind(items: FestivalEx){
             with(binding){
                 viewModel = CellFestivalForSearchViewModel(items)
                 executePendingBindings()
@@ -47,16 +47,16 @@ class FestivalSearchAdapter:
     }
 
     companion object {
-        val diffUtil = object : DiffUtil.ItemCallback<Festival>() {
-            override fun areContentsTheSame(oldItem: Festival, newItem: Festival) =
+        val diffUtil = object : DiffUtil.ItemCallback<FestivalEx>() {
+            override fun areContentsTheSame(oldItem: FestivalEx, newItem: FestivalEx) =
                 oldItem == newItem
 
-            override fun areItemsTheSame(oldItem: Festival, newItem: Festival) =
+            override fun areItemsTheSame(oldItem: FestivalEx, newItem: FestivalEx) =
                 oldItem == newItem
         }
     }
 
-    fun setData(list: MutableList<Festival>?){
+    fun setData(list: MutableList<FestivalEx>?){
         this.list = list!!
         submitList(list)
     }
@@ -68,7 +68,7 @@ class FestivalSearchAdapter:
     private val SearchFilter : Filter = object : Filter() {
         override fun performFiltering(constraint: CharSequence): FilterResults {
 
-            val filteredList: ArrayList<Festival> = ArrayList()
+            val filteredList: ArrayList<FestivalEx> = ArrayList()
             if (constraint == null || constraint.length == 0) {
                 filteredList.addAll(list)
             } else {
@@ -86,7 +86,7 @@ class FestivalSearchAdapter:
         }
 
         override fun publishResults(constraint: CharSequence, results: FilterResults) {
-            submitList(results.values as MutableList<Festival>)
+            submitList(results.values as MutableList<FestivalEx>)
         }
     }
 }
