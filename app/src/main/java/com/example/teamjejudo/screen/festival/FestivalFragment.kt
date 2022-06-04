@@ -34,11 +34,13 @@ class FestivalFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         val searchAdapter = FestivalSearchAdapter()
+        // 테스트용 임시 데이터
         val festivalEx = arrayListOf<FestivalEx>(
             FestivalEx(festivalTitle = "dd"),
             FestivalEx(festivalTitle = "연어"),
             FestivalEx(festivalTitle = "곰"),
         )
+
         _binding = FragmentFestivalBinding.inflate(inflater, container, false)
         binding.apply {
             binding.rvFestivalForsearch.adapter = searchAdapter
