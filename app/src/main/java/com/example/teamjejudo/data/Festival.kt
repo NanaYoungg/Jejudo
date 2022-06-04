@@ -26,7 +26,7 @@ data class Festival(
         ) {
             data class Items(
                 @SerializedName("item")
-                val item: Item
+                val item: List<Item>
             ) {
 
             }
@@ -71,7 +71,7 @@ data class Item(
     @SerializedName("mapx")
     val mapx: Double,
     @SerializedName("mapy")
-    val mapy: Any,
+    val mapy: Double,
     @SerializedName("mlevel")
     val mlevel: Int,
     @SerializedName("modifiedtime")
@@ -84,4 +84,4 @@ data class Item(
     val tel: String,
     @SerializedName("title")
     val title: String
-)
+) {}

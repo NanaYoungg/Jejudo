@@ -18,6 +18,7 @@ import java.util.*
 
 class FestivalSearchAdapter:
     ListAdapter<Item, FestivalSearchAdapter.ViewHolder>(diffUtil), Filterable {
+
     private var list = mutableListOf<Item>()
 
     inner class ViewHolder(private val binding:CellFestivalForsearchBinding): RecyclerView.ViewHolder(binding.root){

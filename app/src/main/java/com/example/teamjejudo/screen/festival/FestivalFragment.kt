@@ -12,17 +12,18 @@ import android.view.ViewGroup
 import android.widget.EditText
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.MutableLiveData
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.teamjejudo.R
-import com.example.teamjejudo.adapter.FestivalAdapter
 import com.example.teamjejudo.adapter.FestivalSearchAdapter
 import com.example.teamjejudo.data.Festival
 import com.example.teamjejudo.data.FestivalEx
 import com.example.teamjejudo.data.Item
 import com.example.teamjejudo.databinding.FragmentFestivalBinding
 import com.example.teamjejudo.retrofit.RetrofitClass
+import com.example.teamjejudo.viewmodel.FestivalViewModel
 import retrofit2.Call
 import retrofit2.Response
 import timber.log.Timber
@@ -32,24 +33,17 @@ import java.util.ArrayList
 class FestivalFragment : Fragment() {
 
     private var _binding: FragmentFestivalBinding? = null
-    private var festival = ArrayList<FestivalEx>()
 
     private val binding get() = _binding!!
 
     lateinit var progressDialog: ProgressDialog
-    private val festivalm = mutableListOf<Item>()
+    private val viewmodel:FestivalViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         val searchAdapter = FestivalSearchAdapter()
-        // 테스트용 임시 데이터
-//        val festivalEx = arrayListOf<FestivalEx>(
-//            FestivalEx(festivalTitle = "곰연어축제"),
-//            FestivalEx(festivalTitle = "곰연어발바닥축제"),
-//            FestivalEx(festivalTitle = "곰희망축제"),
-//        )
 
         _binding = FragmentFestivalBinding.inflate(inflater, container, false)
         binding.apply {
@@ -63,38 +57,41 @@ class FestivalFragment : Fragment() {
         progressDialog.setTitle("Loading")
         progressDialog.setCancelable(false)
         progressDialog.show()
-        getFestivalData()
 
-        searchAdapter.setData(festivalm)
+        viewmodel.getFestivalData(progressDialog)
+        viewmodel.festivals.observe(viewLifecycleOwner){
+            searchAdapter.setData(it)
+        }
+
         return binding.root
     }
 
 
-    private fun getFestivalData() {
-        val Key = "RfOWqUL5%2FWYn34M9dwfN317UuV8MR1dDhVG2TakLes3hWa2Yb2qq3JH99qZIZxuFjElGy3hUEbo67q3K3e0sxw%3D%3D"
-
-        val retrofit = RetrofitClass().api.getFestivals(
-            URLDecoder.decode(Key, "UTF-8"),
-            "AND",
-            "App",
-            "20220604",
-            "json"
-        )
-
-        retrofit.enqueue(object : retrofit2.Callback<Festival> {
-            override fun onResponse(call: Call<Festival>, response: Response<Festival>) {
-                response.body()?.response?.body?.items?.let { festivalm.addAll(it as List<Item>) }
-                progressDialog.dismiss()
-                println(response.body()?.response?.body?.items?.item)
-                Log.d("retrofitFesFrag","${response.body()?.response?.body?.items?.item}")
-            }
-
-            override fun onFailure(call: Call<Festival>, t: Throwable) {
-                Log.d("retrofitFesFrag","${t.message}")
-                Timber.e("실패 ")
-            }
-        })
-    }
+//    private fun getFestivalData() {
+//        val Key = "RfOWqUL5%2FWYn34M9dwfN317UuV8MR1dDhVG2TakLes3hWa2Yb2qq3JH99qZIZxuFjElGy3hUEbo67q3K3e0sxw%3D%3D"
+//
+//        val retrofit = RetrofitClass().api.getFestivals(
+//            URLDecoder.decode(Key, "UTF-8"),
+//            "AND",
+//            "App",
+//            "20220604",
+//            "json"
+//        )
+//
+//        retrofit.enqueue(object : retrofit2.Callback<Festival> {
+//            override fun onResponse(call: Call<Festival>, response: Response<Festival>) {
+//                response.body()?.response?.body?.items?.let { festival.addAll(it.item) }
+//                progressDialog.dismiss()
+//                println(response.body()?.response?.body?.items?.item)
+//                Log.d("retrofitFesFrag","${response.body()?.response?.body?.items?.item}")
+//            }
+//
+//            override fun onFailure(call: Call<Festival>, t: Throwable) {
+//                Log.d("retrofitFesFrag","${t.message}")
+//                Timber.e("실패 ")
+//            }
+//        })
+//    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -107,7 +104,7 @@ class FestivalFragment : Fragment() {
     }
 
     private fun initFestivalAdapter() {
-        binding.rvFestival.adapter = FestivalAdapter(festival, requireContext())
+        //binding.rvFestival.adapter = FestivalAdapter(festival, requireContext())
         binding.rvFestival.layoutManager =
             LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
     }
