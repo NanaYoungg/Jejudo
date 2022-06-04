@@ -6,9 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.teamjejudo.R
 import com.example.teamjejudo.adapter.FestivalAdapter
 import com.example.teamjejudo.data.Festival
 import com.example.teamjejudo.databinding.FragmentFestivalBinding
@@ -18,8 +16,6 @@ import retrofit2.Call
 import retrofit2.Response
 import timber.log.Timber
 import java.net.URLDecoder
-import java.text.SimpleDateFormat
-import java.time.LocalDateTime
 
 
 class FestivalFragment : Fragment() {
@@ -27,7 +23,7 @@ class FestivalFragment : Fragment() {
     private var _binding: FragmentFestivalBinding? = null
     private val binding get() = _binding!!
     lateinit var progressDialog: ProgressDialog
-    private lateinit var adapter : FestivalAdapter
+    private lateinit var adapter: FestivalAdapter
 
     private val festival = mutableListOf<Festival.Response.Body.Items.Item>()
 
@@ -44,10 +40,6 @@ class FestivalFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initFestivalAdapter()
-
-//        adapter.bindViewHolder() .setOnClickListener {
-//            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
-//        }
 
         //통신 로딩
         progressDialog = ProgressDialog(context)
@@ -81,7 +73,7 @@ class FestivalFragment : Fragment() {
                 //TODO: 예외처리
 //                if (festival. != null && festival)
 //                if (festival.map { it.eventenddate }.map { it } <= LocalDateTime.now())
-                    response.body()?.response?.body?.items?.let { festival.addAll(it.item) }
+                response.body()?.response?.body?.items?.let { festival.addAll(it.item) }
                 progressDialog.dismiss()
                 binding.rvFestival.adapter?.notifyDataSetChanged()
             }
