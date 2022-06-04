@@ -1,6 +1,7 @@
 <resources>
-    <string name="app_name">TeamJeJuDo</string>
+    <string name="app_name">K투어</string>
     <string name="ongoing_festival_title">진행중인 축제</string>
+    <string name="app_name_info">국내 모든 축제를 한눈에</string>
     <!-- Strings used for fragments for navigation -->
     <string name="festival_fragment_label">Festival Fragment</string>
     <string name="festival_detail_fragment_label">Festival Detail Fragment</string>

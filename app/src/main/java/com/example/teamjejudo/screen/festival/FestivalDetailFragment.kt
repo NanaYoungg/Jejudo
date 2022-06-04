@@ -32,10 +32,7 @@ class FestivalDetailFragment : Fragment() {
             Glide.with(requireContext()).load(arguments?.getString("photo"))
                 .into(binding.ivFestivalDetail)
 
-//            "photo" to festival.firstimage,
-//            "date" to "${festival.eventstartdate} ~ ${festival.eventenddate}",
-//            "address" to festival.firstimage + " " + festival.firstimage,
-//            "tel" to festival.tel
+
         }
     }
 
