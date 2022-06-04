@@ -4,11 +4,11 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.teamjejudo.data.Festival
+import com.example.teamjejudo.data.FestivalEx
 import com.example.teamjejudo.databinding.CellFestivalBinding
 import timber.log.Timber
 
-class FestivalAdapter(private val festivalData: List<Festival>, context: Context) :
+class FestivalAdapter(private val festivalData: List<FestivalEx>, context: Context) :
     RecyclerView.Adapter<FestivalAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FestivalAdapter.ViewHolder {
@@ -27,7 +27,7 @@ class FestivalAdapter(private val festivalData: List<Festival>, context: Context
     inner class ViewHolder(private val binding: CellFestivalBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(festival: Festival) {
+        fun bind(festival: FestivalEx) {
             binding.tvFestivalTitle.text = festival.festivalTitle
             binding.tvFestivalArea.text = festival.festivalArea.toString()
             binding.tvFestivalDate.text = festival.startDate + " ~ " + festival.endDate
