@@ -9,18 +9,19 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.teamjejudo.R
+import com.example.teamjejudo.data.Festival
 import com.example.teamjejudo.data.FestivalEx
+import com.example.teamjejudo.data.Item
 import com.example.teamjejudo.databinding.CellFestivalForsearchBinding
 import com.example.teamjejudo.viewmodel.CellFestivalForSearchViewModel
 import java.util.*
 
 class FestivalSearchAdapter:
-    ListAdapter<FestivalEx, FestivalSearchAdapter.ViewHolder>(diffUtil), Filterable {
-
-    private var list = mutableListOf<FestivalEx>()
+    ListAdapter<Item, FestivalSearchAdapter.ViewHolder>(diffUtil), Filterable {
+    private var list = mutableListOf<Item>()
 
     inner class ViewHolder(private val binding:CellFestivalForsearchBinding): RecyclerView.ViewHolder(binding.root){
-        fun bind(items: FestivalEx){
+        fun bind(items: Item){
             with(binding){
                 viewModel = CellFestivalForSearchViewModel(items)
                 executePendingBindings()
@@ -47,16 +48,16 @@ class FestivalSearchAdapter:
     }
 
     companion object {
-        val diffUtil = object : DiffUtil.ItemCallback<FestivalEx>() {
-            override fun areContentsTheSame(oldItem: FestivalEx, newItem: FestivalEx) =
+        val diffUtil = object : DiffUtil.ItemCallback<Item>() {
+            override fun areContentsTheSame(oldItem: Item, newItem: Item) =
                 oldItem == newItem
 
-            override fun areItemsTheSame(oldItem: FestivalEx, newItem: FestivalEx) =
+            override fun areItemsTheSame(oldItem: Item, newItem: Item) =
                 oldItem == newItem
         }
     }
 
-    fun setData(list: MutableList<FestivalEx>?){
+    fun setData(list: MutableList<Item>?){
         this.list = list!!
         submitList(list)
     }
@@ -68,14 +69,14 @@ class FestivalSearchAdapter:
     private val SearchFilter : Filter = object : Filter() {
         override fun performFiltering(constraint: CharSequence): FilterResults {
 
-            val filteredList: ArrayList<FestivalEx> = ArrayList()
+            val filteredList: ArrayList<Item> = ArrayList()
             if (constraint == null || constraint.length == 0) {
                 filteredList.addAll(list)
             } else {
                 val filterPattern = constraint.toString().lowercase().trim { it <= ' '}
 
                 for (item in list) {
-                    if(item.festivalTitle.contains(filterPattern)){
+                    if(item.title.contains(filterPattern)){
                         filteredList.add(item)
                     }
                 }
@@ -86,7 +87,7 @@ class FestivalSearchAdapter:
         }
 
         override fun publishResults(constraint: CharSequence, results: FilterResults) {
-            submitList(results.values as MutableList<FestivalEx>)
+            submitList(results.values as MutableList<Item>)
         }
     }
 }
