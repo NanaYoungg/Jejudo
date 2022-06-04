@@ -36,9 +36,9 @@ class FestivalFragment : Fragment() {
         val searchAdapter = FestivalSearchAdapter()
         // 테스트용 임시 데이터
         val festivalEx = arrayListOf<FestivalEx>(
-            FestivalEx(festivalTitle = "dd"),
-            FestivalEx(festivalTitle = "연어"),
-            FestivalEx(festivalTitle = "곰"),
+            FestivalEx(festivalTitle = "곰연어축제"),
+            FestivalEx(festivalTitle = "곰연어발바닥축제"),
+            FestivalEx(festivalTitle = "곰희망축제"),
         )
 
         _binding = FragmentFestivalBinding.inflate(inflater, container, false)
@@ -47,7 +47,7 @@ class FestivalFragment : Fragment() {
             binding.rvFestivalForsearch.layoutManager =
                 LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
             searchAdapter.setData(festivalEx)
-            setEtListeners(etSearchbar, adapter = searchAdapter)
+            setEtListeners(etSearchbar, adapter = searchAdapter,parentview)
         }
         return binding.root
     }
@@ -69,7 +69,7 @@ class FestivalFragment : Fragment() {
 
     }
 
-    private fun setEtListeners(et:EditText,adapter:FestivalSearchAdapter){
+    private fun setEtListeners(et:EditText,adapter:FestivalSearchAdapter,parentview:View){
         et.setOnFocusChangeListener { v, hasFocus ->
             binding.isFocused = hasFocus
         }
@@ -84,6 +84,11 @@ class FestivalFragment : Fragment() {
                 adapter.filter.filter(str)
             }
         })
+
+        parentview.setOnTouchListener { view, motionEvent ->
+            et.clearFocus()
+            true
+        }
     }
 
     override fun onDestroyView() {
