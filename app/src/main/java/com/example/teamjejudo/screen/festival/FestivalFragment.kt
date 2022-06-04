@@ -1,6 +1,7 @@
 package com.example.teamjejudo.screen.festival
 
 import android.app.ProgressDialog
+import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -16,6 +17,7 @@ import retrofit2.Call
 import retrofit2.Response
 import timber.log.Timber
 import java.net.URLDecoder
+import java.time.LocalDateTime
 
 
 class FestivalFragment : Fragment() {
@@ -58,13 +60,17 @@ class FestivalFragment : Fragment() {
     }
 
     private fun getFestivalData() {
-        val retrofit = RetrofitClass().api.getFestivals(
-            URLDecoder.decode(KEY, "UTF-8"),
-            "AND",
-            "App",
-            "20220604",
-            "json"
-        )
+        val retrofit = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            RetrofitClass().api.getFestivals(
+                URLDecoder.decode(KEY, "UTF-8"),
+                "AND",
+                "App",
+                LocalDateTime.now().toString(),
+                "json"
+            )
+        } else {
+            TODO("VERSION.SDK_INT < O")
+        }
 
         retrofit.enqueue(object : retrofit2.Callback<Festival> {
             override fun onResponse(call: Call<Festival>, response: Response<Festival>) {
