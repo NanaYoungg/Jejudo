@@ -18,19 +18,18 @@ import retrofit2.Call
 import retrofit2.Response
 import timber.log.Timber
 import java.net.URLDecoder
+import java.text.SimpleDateFormat
+import java.time.LocalDateTime
 
 
 class FestivalFragment : Fragment() {
 
     private var _binding: FragmentFestivalBinding? = null
     private val binding get() = _binding!!
-//    private lateinit var adapter: FestivalAdapter
-//    private val adapter: FestivalAdapter by lazy { FestivalAdapter() }
     lateinit var progressDialog: ProgressDialog
+    private lateinit var adapter : FestivalAdapter
 
-    //    private val festival = mutableListOf<Festival>()
     private val festival = mutableListOf<Festival.Response.Body.Items.Item>()
-    private val festival2 = mutableListOf<Festival>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -44,11 +43,11 @@ class FestivalFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        println("ddddddddddddddddddddddddddddddd22222")
         initFestivalAdapter()
-        binding.buttonFirst.setOnClickListener {
-            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
-        }
+
+//        adapter.bindViewHolder() .setOnClickListener {
+//            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
+//        }
 
         //통신 로딩
         progressDialog = ProgressDialog(context)
@@ -59,8 +58,6 @@ class FestivalFragment : Fragment() {
     }
 
     private fun initFestivalAdapter() {
-        println("dddddd ${festival.size}")
-        println("ssss233333333333333332 ${festival2.size}")
         val adapter = FestivalAdapter() //어댑터 객체 만듦
         adapter.festivalList = festival //데이터 넣어줌
         binding.rvFestival.adapter = adapter //리사이클러뷰에 어댑터 연결
@@ -76,12 +73,16 @@ class FestivalFragment : Fragment() {
             "20220604",
             "json"
         )
+
         retrofit.enqueue(object : retrofit2.Callback<Festival> {
             override fun onResponse(call: Call<Festival>, response: Response<Festival>) {
-                response.body()?.response?.body?.items?.let { festival.addAll(it.item) }
+//                val formatter = SimpleDateFormat("yyyy-MM-dd")
+//                val startDateFormat = formatter.parse(LocalDateTime.now())
+                //TODO: 예외처리
+//                if (festival. != null && festival)
+//                if (festival.map { it.eventenddate }.map { it } <= LocalDateTime.now())
+                    response.body()?.response?.body?.items?.let { festival.addAll(it.item) }
                 progressDialog.dismiss()
-                println("test ${response.body()?.response?.body?.items?.item}")
-
                 binding.rvFestival.adapter?.notifyDataSetChanged()
             }
 

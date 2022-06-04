@@ -59,7 +59,7 @@ data class Festival(
                     @SerializedName("createdtime")
                     val createdtime: Long,
                     @SerializedName("eventenddate")
-                    val eventenddate: Int,
+                    val eventenddate: Int?,
                     @SerializedName("eventstartdate")
                     val eventstartdate: Int,
                     @SerializedName("firstimage")
