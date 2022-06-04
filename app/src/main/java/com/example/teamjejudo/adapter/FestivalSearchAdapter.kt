@@ -13,6 +13,7 @@ import com.example.teamjejudo.data.Festival
 import com.example.teamjejudo.data.FestivalEx
 import com.example.teamjejudo.data.Item
 import com.example.teamjejudo.databinding.CellFestivalForsearchBinding
+import com.example.teamjejudo.screen.festival.FestivalFragmentDirections
 import com.example.teamjejudo.viewmodel.CellFestivalForSearchViewModel
 import java.util.*
 
@@ -31,7 +32,8 @@ class FestivalSearchAdapter:
 
         init{
             binding.root.setOnClickListener { view->
-                view.findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
+                val direction = FestivalFragmentDirections.actionFirstFragmentToSecondFragment(binding.viewModel.contentid)
+                view.findNavController().navigate(direction)
             }
         }
     }

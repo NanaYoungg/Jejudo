@@ -1,34 +1,24 @@
 package com.example.teamjejudo.screen.festival
 
 import android.app.ProgressDialog
-import android.hardware.lights.LightsManager
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
-import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.MutableLiveData
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.LinearSnapHelper
+import androidx.recyclerview.widget.RecyclerView
 import com.example.teamjejudo.R
 import com.example.teamjejudo.adapter.FestivalSearchAdapter
-import com.example.teamjejudo.data.Festival
-import com.example.teamjejudo.data.FestivalEx
-import com.example.teamjejudo.data.Item
 import com.example.teamjejudo.databinding.FragmentFestivalBinding
-import com.example.teamjejudo.retrofit.RetrofitClass
 import com.example.teamjejudo.viewmodel.FestivalViewModel
-import retrofit2.Call
-import retrofit2.Response
-import timber.log.Timber
-import java.net.URLDecoder
-import java.util.ArrayList
+
 
 class FestivalFragment : Fragment() {
 
@@ -41,7 +31,7 @@ class FestivalFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View {
         val searchAdapter = FestivalSearchAdapter()
 
@@ -65,33 +55,6 @@ class FestivalFragment : Fragment() {
 
         return binding.root
     }
-
-
-//    private fun getFestivalData() {
-//        val Key = "RfOWqUL5%2FWYn34M9dwfN317UuV8MR1dDhVG2TakLes3hWa2Yb2qq3JH99qZIZxuFjElGy3hUEbo67q3K3e0sxw%3D%3D"
-//
-//        val retrofit = RetrofitClass().api.getFestivals(
-//            URLDecoder.decode(Key, "UTF-8"),
-//            "AND",
-//            "App",
-//            "20220604",
-//            "json"
-//        )
-//
-//        retrofit.enqueue(object : retrofit2.Callback<Festival> {
-//            override fun onResponse(call: Call<Festival>, response: Response<Festival>) {
-//                response.body()?.response?.body?.items?.let { festival.addAll(it.item) }
-//                progressDialog.dismiss()
-//                println(response.body()?.response?.body?.items?.item)
-//                Log.d("retrofitFesFrag","${response.body()?.response?.body?.items?.item}")
-//            }
-//
-//            override fun onFailure(call: Call<Festival>, t: Throwable) {
-//                Log.d("retrofitFesFrag","${t.message}")
-//                Timber.e("실패 ")
-//            }
-//        })
-//    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

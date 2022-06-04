@@ -9,4 +9,7 @@ class CellFestivalForSearchViewModel(items: Item) {
 
     val title:String
         get() = items.title
+
+    val contentid:Int
+        get() = items.contentid
 }
